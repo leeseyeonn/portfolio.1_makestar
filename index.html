@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKESTAR</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- 상단 배너-->
+    <div id="top_bnr" >
+        <a href="#">
+            <button></button>
+            <p>[2025년 10월] 신용카드(한국) 무이자 할부 행사 안내</p>
+            <button type="button"><img src="./images/icon_close.svg" alt=""></button>
+        </a>
+    </div>
+    <!-- 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1><a href="#"><img src="./images/makestar_logo.png" alt=""></a></h1>
+        <!-- 카테고리 -->
+        <nav class="gnb">
+            <ul>
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">HOT</a></li>
+                <li>
+                    <a href="#">SHOP</a>
+                    <ul class="lnb">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">추천상품</a></li>
+                        <li><a href="#">앨범</a></li>
+                        <li><a href="#">드라마/영화</a></li>
+                        <li><a href="#">DVD</a></li>
+                        <li><a href="#">Light Stick</a></li>
+                        <li><a href="#">PHOTOBOOK</a></li>
+                        <li><a href="#">MD</a></li>
+                        <li><a href="#">Pre-Order</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">EVENT</a>
+                    <ul class="lnb">
+                        <li><a href="#">진행중인 이벤트</a></li>
+                        <li><a href="#">진행예정 이벤트</a></li>
+                        <li><a href="#">당첨자 발표중인 이벤트</a></li>
+                        <li><a href="#">종료된 이벤트</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NOTICE</a></li>
+                <li><a href="#">ARTIST</a></li>
+                <li>
+                    <a href="#">FUNDING</a>
+                    <ul class="lnb">
+                        <li><a href="#">모든 프로젝트</a></li>
+                        <li><a href="#">진행중인 프로젝트</a></li>
+                        <li><a href="#">종료된 프로젝트</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- 헤더 오른쪽 -->
+        <div class="right_menu">
+            <!-- 아이콘 메뉴들 -->
+            <div class="sub">
+                <!-- 검색 -->
+                <button type="button">
+                    <img src="./images/icon_search.svg" alt="검색">
+                </button>
+                <div class="search_box">
+                    <!-- 검색바 -->
+                    <div class="search_bar">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="close">
+                            <img src="./images/icon_close_black.svg" alt="닫기">
+                        </button>
+                    </div>
+                    <!-- 검색이력 -->
+                    <ul class="search_history">
+                        <li>HEARTS2HEARTS
+                            <img src="./images/icon_close_samll.svg" alt="">
+                        </li>
+                        <li>에스파
+                            <img src="./images/icon_close_samll.svg" alt="">
+                        </li>
+                        <li>백예린
+                            <img src="./images/icon_close_samll.svg" alt="">
+                        </li>
+                        <li>데이식스
+                            <img src="./images/icon_close_samll.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!-- 유저 -->
+                <a href="#">
+                    <img src="./images/icon_user.svg" alt="">
+                </a>
+                <!-- 장바구니 -->
+                <a href="#">
+                    <img src="./images/icon_cart.svg" alt="">
+                </a>
+            </div>
+            <!-- 언어 설정 -->
+            <div class="language">
+                <!-- 선택됨 -->
+                <button type="button" class="selected">KOR
+                    <img src="./images/icon_down.svg" alt="">
+                </button>
+                <!-- 옵션들 -->
+                <div class="select">
+                    <ul class="options">
+                        <li data-value="kor">KOR</li>
+                        <li data-value="eng">ENG</li>
+                        <li data-value="jpn">JPN</li>
+                        <li data-value="chn">CHN</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 메인 -->
+    <main>
+        <section id="banner" class="row row1">
+            <div class="swiper" id="event_add">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide evt_add evt1"><a href="#"><!-- 이프아이 --></a></div>
+                    <div class="swiper-slide evt_add evt2"><a href="#"><!-- 보넥도 --></a></div>
+                    <div class="swiper-slide evt_add evt3"><a href="#"><!-- 하투하 --></a></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <!-- 이벤트 타이틀 -->
+            <div class="event_text">
+                <div class="currnet_text">
+                    <dl>
+                        <dt class="event_type">MEET&CALL</dt>
+                        <dd class="artist">YVES(이브) </dd>
+                        <dd class="event_title">MEET&CALL EVENT PART.3</dd>
+                        <dd class="date">2025. 10. 18 ~ 10. 20</dd>
+                    </dl>
+                </div>
+                <div class="next_text1">
+                    <dl>
+                        <dt class="event_type">Photocard Event</dt>
+                        <dd class="artist">IFEYE</dd>
+                        <dd class="event_title">MEET&CALL EVENT</dd>
+                        <dd class="date">2025. 09. 29 ~ 10. 19</dd>
+                    </dl>
+                </div>
+                <div class="next_text2">
+                    <dl>
+                        <dt class="event_type">ETC</dt>
+                        <dd class="artist">BOYNEXTDOOR</dd>
+                        <dd class="event_title">PRE-ORDER EVENT</dd>
+                        <dd class="date">2025. 09. 23 ~ 10. 19</dd>
+                    </dl>
+                </div>
+                <a href="#">이벤트 바로가기
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_294_2674" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-3" y="-2" width="13" height="12">
+                    <rect x="-2.5" y="-2" width="12" height="12" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_294_2674)">
+                    <path d="M1.50288 9.30775L0.97113 8.776L5.09326 4.65387L0.97113 0.53175L1.50288 0L6.15675 4.65387L1.50288 9.30775Z" fill="white"/>
+                    </g>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <section id="new" class="row row2">
+            <!-- 제품 카테고리 -->
+            <div class="item_list">
+                <ul>
+                    <li><a href="#">ALL</a></li>
+                    <li><a href="#">MD</a></li>
+                    <li><a href="#">ALBUM</a></li>
+                    <li><a href="#">DVD</a></li>
+                    <li><a href="#">PHOTOBOOK</a></li>
+                </ul>
+            </div>
+            <!-- 신제품 왼쪽 타이틀 -->
+            <div class="menu_title">
+                <h2>NEW ITEMS</h2>
+                <p class="sub_title">지금 빠르게 만나보세요</p>
+                <a href="#" class="andmore_btn">
+                    <span>신제품 더보기</span>
+                    <img src="./images/icon_right.svg" alt="">
+                </a>
+            </div>
+            <!-- 신제품 슬라이드 -->
+            <div class="swiper" id="new_items_wrap">
+                <!--필수-->
+                <div class="swiper-wrapper">
+                    <!-- 신상품 1 -->
+                    <div class="swiper-slide new new1">
+                        <a href="#">
+                            <img src="./images/new01.jpg" alt="신상품1">
+                            <dl class="item">
+                                <dt class="item_artist">김희나</dt>
+                                <dd class="item_title">김희나 [소리의 시 (Literary Jazz)]</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩23,800</span>
+                                <span class="item_ori_price"><del>₩28,560</del></span>
+                            </dl>
+                        </a>
+                    </div>
+                    <!-- 신상품 2 -->
+                    <div class="swiper-slide new new2">
+                        <a href="#">
+                            <img src="./images/new02.jpg" alt="신상품2">
+                            <dl class="item">
+                                <dt class="item_artist">Hebi</dt>
+                                <dd class="item_title">Hebi 미니 2집 [Human Eclipse] (Poca pack ver.)</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩7,400</span>
+                                <span class="item_ori_price"><del>₩9,250</del></span>
+                                <dd class="pre_order_title">PRE-ORDER</dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <!-- 신상품 3 -->
+                    <div class="swiper-slide new new3">
+                        <a href="#">
+                            <img src="./images/new03.jpg" alt="신상품3">
+                            <dl class="item">
+                                <dt class="item_artist">김미연</dt>
+                                <dd class="item_title">김미연 [Resonance]</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩22,300</span>
+                                <span class="item_ori_price"><del>₩27,875</del></span>
+                                <dd class="pre_order_title">PRE-ORDER</dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <!-- 신상품 4 -->
+                    <div class="swiper-slide new new4">
+                        <a href="#">
+                            <img src="./images/new04.jpg" alt="신상품4">
+                            <dl class="item">
+                                <dt class="item_artist">조이스</dt>
+                                <dd class="item_title">조이스 (Joyce) [Wanna be a star]</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩13,400</span>
+                                <span class="item_ori_price"><del>₩16,750</del></span>
+                            </dl>
+                        </a>
+                    </div>
+                    <!-- 신상품 5 -->
+                    <div class="swiper-slide new new5">
+                        <a href="#">
+                            <img src="./images/new05.jpg" alt="신상품5">
+                            <dl class="item">
+                                <dt class="item_artist">KARDI</dt>
+                                <dd class="item_title">KARDI When The Lights Out</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩22,300</span>
+                                <span class="item_ori_price"><del>₩27,875</del></span>
+                            </dl>
+                        </a>
+                    </div>
+                    <!-- 신상품 6 -->
+                    <div class="swiper-slide new new5">
+                        <a href="#">
+                            <img src="./images/new05.jpg" alt="신상품5">
+                            <dl class="item">
+                                <dt class="item_artist">KARDI</dt>
+                                <dd class="item_title">KARDI When The Lights Out</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩22,300</span>
+                                <span class="item_ori_price"><del>₩27,875</del></span>
+                            </dl>
+                        </a>
+                    </div>
+                    <!-- 신상품 7 -->
+                    <div class="swiper-slide new new5">
+                        <a href="#">
+                            <img src="./images/new05.jpg" alt="신상품5">
+                            <dl class="item">
+                                <dt class="item_artist">KARDI</dt>
+                                <dd class="item_title">KARDI When The Lights Out</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩22,300</span>
+                                <span class="item_ori_price"><del>₩27,875</del></span>
+                            </dl>
+                        </a>
+                    </div>
+                </div>
+                <!--필요 시 사용(선택)-->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+        <section id="hot" class="row row3">
+            <!-- 인기상품 타이틀 -->
+            <div class="menu_title">
+                <h2>HOT</h2>
+                <p class="sub_title">가장 인기 있는 상품들을 한눈에 확인해보세요.</p>
+            </div>
+            <!-- 제품 카테고리 -->
+            <div class="item_list">
+                <ul>
+                    <li><a href="#">ALL</a></li>
+                    <li><a href="#">MD</a></li>
+                    <li><a href="#">ALBUM</a></li>
+                    <li><a href="#">DVD</a></li>
+                    <li><a href="#">PHOTOBOOK</a></li>
+                </ul>
+            </div>
+            <!-- 인기상품 슬라이드 -->
+            <div class="swiper" id="hot_items_wrap">
+                <!--필수-->
+                <div class="swiper-wrapper">
+                    <!-- 인기상품 1 -->
+                    <div class="swiper-slide hot hot1">
+                        <a href="#">
+                            <img src="./images/hot01.jpg" alt="인기상품1">
+                            <dl class="item">
+                                <dt class="item_artist">해찬</dt>
+                                <dd class="item_title">해찬 1집 [TASTE] (LP Ver.)]</dd>
+                                <span class="item_discount_rate">20%</span>
+                                <span class="item_price">₩53,500</span>
+                                <span class="item_ori_price"><del>₩66,875</del></span>
+                                <dd class="pre_order_title">PRE-ORDER</dd>
+                            </dl>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+                <!--필요 시 사용(선택)-->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <!-- 인기 상품 더보기 -->
+            <a href="#" class="andmore_btn">
+                    <span>인기상품 더보기</span>
+                    <img src="./images/icon_right.svg" alt="">
+            </a>
+        </section>
+        <section id="add" class="row row4"></section>
+        <section id="add" class="row row5"></section>
+        <section id="event" class="row row6"></section>
+        <section id="sns" class="row row7_1"></section>
+        <section id="news" class="row row7_2"></section>
+    </main>
+    <!-- 푸터 -->
+    <footer></footer>
+</body>
+</html>
