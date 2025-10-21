@@ -7,7 +7,7 @@ em,strong,sub,sup,br,span,del,s,q,mark,code,img,a,
 table,thead,tbody,tfoot,tr,td,th {
     margin:0; padding:0; box-sizing:border-box;
     line-height:1; letter-spacing:-0.02em; word-spacing:0px;
-    font-size:1em; font-weight:400; font-style:normal;
+    font-size:0.875rem; font-weight:400; font-style:normal;
     color:#111;
     font-family:'Noto Sans KR', '바탕체', serif;
 }

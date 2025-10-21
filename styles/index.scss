@@ -1,0 +1,138 @@
+//index
+
+@use './common.scss' as *;
+
+body {background-color:$color-gray-01;}
+
+/* 상단 배너 */
+#top_bnr {
+    background-color:$color-black-01;
+    max-width: 100%;
+    a{
+        @include row; justify-content:space-between;
+        padding: 10px 50px;
+        button {
+            img{}
+        }
+        p{
+            color:$color-white;
+        }
+    }
+}
+
+/* 헤더 */
+header {
+    @include check1;
+    @include row; justify-content: space-between;
+    padding: 0 150px;
+    height: 60px;
+    /* 로고 */
+    h1 {
+        a {
+            width: 100%;
+            img {
+                width: 120px;
+                height: 17px;
+            }
+        }
+    }
+    /* 카테고리 */
+    .gnb {
+        ul {
+            @include row; gap:50px;
+            font-size:$font-size-16;
+            font-weight:$font-weight-m;
+            li {
+                
+                .lnb {@include dis-non;}
+            }
+        }
+    }
+    /* 오른쪽 메뉴 */
+    .right_menu {
+        @include row; gap: 30px;;
+        /* 아이콘 메뉴들 */
+        .sub {
+            button {
+                img {}
+            }
+            .search_box { 
+                @include dis-non;
+                /* 검색 바 */
+                .search_bar{}
+                /* 검색 이력 */
+                .search_history{}
+            }
+        }
+        .language {
+            @include check1;
+
+            /* 선택됨 */
+            .selected {
+                @include row;
+                span {}
+                img {}
+            }
+            /* 옵션들 */
+            .select {
+                @include dis-non;
+                .options {}
+            }
+        }
+    }
+}
+
+main {
+    .row {}
+    /* --------------------------배너 */
+    #banner {
+        @include check1;
+        #event_add {
+            .swiper-wrapper {
+                
+                @include check2;
+                .evt_add {
+                    width: 1250px;
+                    height:736px;
+                    a {
+                        height:100%;
+                        width: 100%;
+                        display: block;
+                        background-size: cover;
+                    }
+                }
+                .evt1 {
+                    a {
+                        background:url(../images/banner_yves.jpg);
+                    }
+                }
+                .evt2 {}
+                .evt3 {}
+            }
+            .bnr_btn {}
+            .swiper-button-prev {}
+            .swiper-button-next {}
+        }
+        .event_text {
+            dl {
+                .event_type {}
+                .artist {}
+                .event_title {}
+                .date {}
+            }
+            .next_text1 {}
+            .next_text2 {}
+            a {background-color: red;}
+        }
+    }
+    /* --------------------------신제품 */
+    #new {}
+    /* --------------------------인기상품 */
+    #hot {}
+    /* --------------------------토스광고 */
+    #add {}
+    /* --------------------------이벤트 */
+    #event {}
+    /* --------------------------인스타, 공지 */
+    #sns_news{}
+}

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+body {
+  background-color: #f2f2f2;
+}
+
+/* 상단 배너 */
+#top_bnr {
+  background-color: #222;
+  max-width: 100%;
+}
+#top_bnr a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+#top_bnr a p {
+  color: #fff;
+}
+
+/* 헤더 */
+header {
+  border: 2px solid red;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+  height: 60px;
+  /* 로고 */
+}
+header h1 a {
+  width: 100%;
+}
+header h1 a img {
+  width: 120px;
+  height: 17px;
+}
+header {
+  /* 카테고리 */
+}
+header .gnb ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+header .gnb ul li .lnb {
+  display: none;
+}
+header {
+  /* 오른쪽 메뉴 */
+}
+header .right_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 30px;
+  /* 아이콘 메뉴들 */
+}
+header .right_menu .sub .search_box {
+  display: none;
+  /* 검색 바 */
+}
+header .right_menu .sub .search_box {
+  /* 검색 이력 */
+}
+header .right_menu .language {
+  border: 2px solid red;
+  /* 선택됨 */
+}
+header .right_menu .language .selected {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+header .right_menu .language {
+  /* 옵션들 */
+}
+header .right_menu .language .select {
+  display: none;
+}
+main {
+  /* --------------------------배너 */
+}
+main #banner {
+  border: 2px solid red;
+}
+main #banner #event_add .swiper-wrapper {
+  border: 2px solid green;
+}
+main #banner #event_add .swiper-wrapper .evt_add {
+  width: 1250px;
+  height: 736px;
+}
+main #banner #event_add .swiper-wrapper .evt_add a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-size: cover;
+}
+main #banner #event_add .swiper-wrapper .evt1 a {
+  background: url(../images/banner_yves.jpg);
+}
+main #banner .event_text a {
+  background-color: red;
+}
+main {
+  /* --------------------------신제품 */
+}
+main {
+  /* --------------------------인기상품 */
+}
+main {
+  /* --------------------------토스광고 */
+}
+main {
+  /* --------------------------이벤트 */
+}
+main {
+  /* --------------------------인스타, 공지 */
+}
+
+/*# sourceMappingURL=main.css.map */
