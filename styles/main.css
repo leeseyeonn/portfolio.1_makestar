@@ -21,7 +21,7 @@ body {
 
 /* 헤더 */
 header {
-  border: 2px solid red;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -69,7 +69,6 @@ header .right_menu .sub .search_box {
   /* 검색 이력 */
 }
 header .right_menu .language {
-  border: 2px solid red;
   /* 선택됨 */
 }
 header .right_menu .language .selected {
@@ -89,24 +88,29 @@ main {
 main #banner {
   border: 2px solid red;
 }
-main #banner #event_add .swiper-wrapper {
-  border: 2px solid green;
-}
-main #banner #event_add .swiper-wrapper .evt_add {
+main #banner #event_add {
+  overflow: visible;
+  position: relative;
   width: 1250px;
   height: 736px;
 }
 main #banner #event_add .swiper-wrapper .evt_add a {
-  height: 100%;
-  width: 100%;
   display: block;
   background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 main #banner #event_add .swiper-wrapper .evt1 a {
-  background: url(../images/banner_yves.jpg);
+  background-image: url(../images/banner_yves.jpg);
+}
+main #banner #event_add .swiper-wrapper .evt2 a {
+  background-image: url(../images/banner_bnd.jpg);
+}
+main #banner #event_add .swiper-wrapper .evt3 a {
+  background-image: url(../images/banner_ifeye.jpg);
 }
 main #banner .event_text a {
-  background-color: red;
+  background-color: blue;
 }
 main {
   /* --------------------------신제품 */

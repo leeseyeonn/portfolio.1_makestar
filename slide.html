@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .swiper {/* border: 1px solid saddlebrown; */ width: 300px; height: 300px; border: 2px solid red;}
+        .swiper .swiper-wrapper {}
+        .swiper .swiper-wrapper .swiper-slide {/* border: 5px solid blue; */}
+        .swiper-slide-active {border:10px solid seagreen;}
+        .swiper .swiper-wrapper .sd1 {background-color: aquamarine;}
+        .swiper .swiper-wrapper .sd2 {background: yellow;}
+        .swiper .swiper-wrapper .sd3 {background: palevioletred;}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="swiper" id="hw">
+		<!--필수-->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide sd1">slide1</div>
+                <div class="swiper-slide sd2">slide2</div>
+                <div class="swiper-slide sd3">slide3</div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const mySwiper = new Swiper('#hw')
+    </script>
+</body>
+</html>
