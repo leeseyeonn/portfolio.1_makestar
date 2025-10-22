@@ -1,11 +1,14 @@
 const eventSwiper = new Swiper("#event_add", {
-  slidesPerView: "auto",
+  slidesPerView: "1.2",
   spaceBetween: 60,
   centeredSlides: true,
-  slideToClickedSlide: true,
   loop: true,
+  pagination: {
+    el: "#event_add .swiper-pagination",
+    type: "fraction",
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: "#event_add .add_btn .swiper-button-next",
+    prevEl: "#event_add .add_btn .swiper-button-prev",
   },
 });

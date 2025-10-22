@@ -86,22 +86,59 @@ main {
     .row {}
     /* --------------------------배너 */
     #banner {
-        @include check1;
+        background-color:$color-white;
         #event_add {
-            overflow: visible;
-            position: relative;
             
-            width: 1250px;
-            height: 736px;
+            
             .swiper-wrapper {
+                width: 1600px;
+                height: 736px;
+                
                 
                 .evt_add {
-                        a {
+                    @include row; gap:60px;
+                    
+                    .bnr_img {
+                        
                         display: block;
+                        width: 100%;
+                        height: 100%;
                         background-size: cover;
                         background-position: center;
-                        height: 100%;
+                        border-radius: 20px;
+                        overflow: hidden;
                     }
+                    .bnr_info {
+                        @include col; gap:100px; align-items: flex-start;
+                        dl {
+                            .event_type {
+                                font-size:$font-size-16;
+                                color:$color-black-02;
+                                font-weight:$font-weight-m;
+                                padding-bottom: 15px;
+                            }
+                            .artist {
+                                font-size:$font-size-26;
+                                color:$color-black-03;
+                                font-weight:$font-weight-m;
+                                padding-bottom: 12px;
+                            }
+                            .event_title {
+                                font-size:$font-size-26;
+                                color:$color-black-01;
+                                font-weight:$font-weight-m;
+                                padding-bottom: 15px;
+                            }
+                            .date {
+                                font-size:$font-size-16;
+                                color:$color-gray-02;
+                            }
+                        }
+                        .andmore_btn {
+                            
+                        } 
+                    }
+                    
                 }
                 .evt1 {
                     a {
@@ -118,10 +155,34 @@ main {
                         background-image: url(../images/banner_ifeye.jpg);
                     }
                 }
+                .evt4 {
+                    a {
+                        background-image: url(../images/banner_lucy.jpg);
+                    }
+                }
             }
-            .bnr_btn {}
-            .swiper-button-prev {}
-            .swiper-button-next {}
+            .swiper-slide-prev,
+            .swiper-slide-next {
+                opacity: 0.2;
+                
+                .bnr_info {
+                    @include dis-non;
+                }
+            }
+            .swiper-slide-active {
+                
+                a {
+                    width: 78% !important;
+                }
+                
+            }
+
+            .add_btn {
+                span {}
+                .swiper-button-prev {}
+                .swiper-button-next {}
+            }
+            
         }
         .event_text {
             dl {

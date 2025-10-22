@@ -86,19 +86,55 @@ main {
   /* --------------------------배너 */
 }
 main #banner {
-  border: 2px solid red;
+  background-color: #fff;
 }
-main #banner #event_add {
-  overflow: visible;
-  position: relative;
-  width: 1250px;
+main #banner #event_add .swiper-wrapper {
+  width: 1600px;
   height: 736px;
 }
-main #banner #event_add .swiper-wrapper .evt_add a {
+main #banner #event_add .swiper-wrapper .evt_add {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 60px;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_img {
   display: block;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 100px;
+  align-items: flex-start;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info dl .event_type {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info dl .artist {
+  font-size: 1.625rem;
+  color: #6E6E6E;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info dl .event_title {
+  font-size: 1.625rem;
+  color: #222;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info dl .date {
+  font-size: 1rem;
+  color: #777;
 }
 main #banner #event_add .swiper-wrapper .evt1 a {
   background-image: url(../images/banner_yves.jpg);
@@ -108,6 +144,20 @@ main #banner #event_add .swiper-wrapper .evt2 a {
 }
 main #banner #event_add .swiper-wrapper .evt3 a {
   background-image: url(../images/banner_ifeye.jpg);
+}
+main #banner #event_add .swiper-wrapper .evt4 a {
+  background-image: url(../images/banner_lucy.jpg);
+}
+main #banner #event_add .swiper-slide-prev,
+main #banner #event_add .swiper-slide-next {
+  opacity: 0.2;
+}
+main #banner #event_add .swiper-slide-prev .bnr_info,
+main #banner #event_add .swiper-slide-next .bnr_info {
+  display: none;
+}
+main #banner #event_add .swiper-slide-active a {
+  width: 78% !important;
 }
 main #banner .event_text a {
   background-color: blue;
