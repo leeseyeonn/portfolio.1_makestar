@@ -88,18 +88,15 @@ main {
     #banner {
         background-color:$color-white;
         #event_add {
-            
-            
+            padding: 30px 50px;
+
             .swiper-wrapper {
                 width: 1600px;
                 height: 736px;
-                
-                
                 .evt_add {
                     @include row; gap:60px;
-                    
                     .bnr_img {
-                        
+
                         display: block;
                         width: 100%;
                         height: 100%;
@@ -109,7 +106,9 @@ main {
                         overflow: hidden;
                     }
                     .bnr_info {
+
                         @include col; gap:100px; align-items: flex-start;
+                        padding-bottom: 120px;
                         dl {
                             .event_type {
                                 font-size:$font-size-16;
@@ -135,65 +134,115 @@ main {
                             }
                         }
                         .andmore_btn {
-                            
+                            @include btn-style;
+                            background:$color-black-02;
+                            color:$color-white;
+
+                            img {
+                                width: 12px;
+                                height: 12px;
+                            }
                         } 
                     }
                     
                 }
                 .evt1 {
-                    a {
+                    .bnr_img {
                         background-image: url(../images/banner_yves.jpg);
                     }
                 }
                 .evt2 {
-                    a{
+                    .bnr_img {
                         background-image: url(../images/banner_bnd.jpg);
                     }
                 }
                 .evt3 {
-                    a {
+                    .bnr_img  {
                         background-image: url(../images/banner_ifeye.jpg);
                     }
                 }
                 .evt4 {
-                    a {
+                    .bnr_img  {
                         background-image: url(../images/banner_lucy.jpg);
                     }
                 }
             }
-            .swiper-slide-prev,
+            .swiper-slide-prev ,
             .swiper-slide-next {
                 opacity: 0.2;
-                
                 .bnr_info {
-                    @include dis-non;
+                    display: none !important;
                 }
             }
             .swiper-slide-active {
                 
-                a {
+                .bnr_img {
                     width: 78% !important;
                 }
                 
             }
 
             .add_btn {
-                span {}
-                .swiper-button-prev {}
-                .swiper-button-next {}
+                background: $color-white;
+                position: absolute;
+                z-index: 100;
+                width: 124px; height: 74px; 
+                right: 28%; bottom: 30px;
+                border-top-left-radius:20px;
+                span {
+                    &::after {
+                        display: block;
+                        content: '';
+                        position:relative;
+                        top: 42%; left: 63%;
+                        opacity: 0.7;
+                        background: $color-gray-02;
+                        width: 1.5px; height: 25%;
+                    }
+                }
+                .swiper-button-prev,
+                .swiper-button-next {
+                    transform: translateY(90%);
+                    width: 10px; height: 18px;
+                    background: $color-white;
+                    color:$color-gray-02;
+                    margin-left: 40px;
+                    margin-right: 10px;
+                }
             }
-            
-        }
-        .event_text {
-            dl {
-                .event_type {}
-                .artist {}
-                .event_title {}
-                .date {}
+            .swiper-pagination {
+                width: 56px; height: 26px;
+                top:73.5%; left: 86.5%;
+                transform: translate(-50%,-50%);
+                background: $color-gray-03;
+                border-radius: 20px;
+                @include row;
+                justify-content: center;
+                gap:5px;
+                &::before {
+                    display: block;
+                    width: 10%; height: 100%;
+                    position: absolute;
+                    top:0; left: 46%;
+                    background: $color-gray-03;
+                    content: "";}
+                    
+                .swiper-pagination-current {
+                    color:$color-black-04;
+                    &::after {
+                    display: block;
+                    width: 10%; height: 100%;
+                    position: absolute;
+                    top:26%; left: 46%;
+                    color:$color-black-04;
+                    opacity: 0.5;
+                    content: "/";}
+                }
+                .swiper-pagination-total {
+                    color:$color-black-04;
+                    opacity: 0.5;
+                }
             }
-            .next_text1 {}
-            .next_text2 {}
-            a {background-color: blue;}
         }
     }
     /* --------------------------신제품 */

@@ -88,6 +88,9 @@ main {
 main #banner {
   background-color: #fff;
 }
+main #banner #event_add {
+  padding: 30px 50px;
+}
 main #banner #event_add .swiper-wrapper {
   width: 1600px;
   height: 736px;
@@ -113,6 +116,7 @@ main #banner #event_add .swiper-wrapper .evt_add .bnr_info {
   align-items: center;
   gap: 100px;
   align-items: flex-start;
+  padding-bottom: 120px;
 }
 main #banner #event_add .swiper-wrapper .evt_add .bnr_info dl .event_type {
   font-size: 1rem;
@@ -136,16 +140,30 @@ main #banner #event_add .swiper-wrapper .evt_add .bnr_info dl .date {
   font-size: 1rem;
   color: #777;
 }
-main #banner #event_add .swiper-wrapper .evt1 a {
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info .andmore_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border-radius: 60px;
+  background: #333;
+  color: #fff;
+}
+main #banner #event_add .swiper-wrapper .evt_add .bnr_info .andmore_btn img {
+  width: 12px;
+  height: 12px;
+}
+main #banner #event_add .swiper-wrapper .evt1 .bnr_img {
   background-image: url(../images/banner_yves.jpg);
 }
-main #banner #event_add .swiper-wrapper .evt2 a {
+main #banner #event_add .swiper-wrapper .evt2 .bnr_img {
   background-image: url(../images/banner_bnd.jpg);
 }
-main #banner #event_add .swiper-wrapper .evt3 a {
+main #banner #event_add .swiper-wrapper .evt3 .bnr_img {
   background-image: url(../images/banner_ifeye.jpg);
 }
-main #banner #event_add .swiper-wrapper .evt4 a {
+main #banner #event_add .swiper-wrapper .evt4 .bnr_img {
   background-image: url(../images/banner_lucy.jpg);
 }
 main #banner #event_add .swiper-slide-prev,
@@ -154,13 +172,83 @@ main #banner #event_add .swiper-slide-next {
 }
 main #banner #event_add .swiper-slide-prev .bnr_info,
 main #banner #event_add .swiper-slide-next .bnr_info {
-  display: none;
+  display: none !important;
 }
-main #banner #event_add .swiper-slide-active a {
+main #banner #event_add .swiper-slide-active .bnr_img {
   width: 78% !important;
 }
-main #banner .event_text a {
-  background-color: blue;
+main #banner #event_add .add_btn {
+  background: #fff;
+  position: absolute;
+  z-index: 100;
+  width: 124px;
+  height: 74px;
+  right: 28%;
+  bottom: 30px;
+  border-top-left-radius: 20px;
+}
+main #banner #event_add .add_btn span::after {
+  display: block;
+  content: "";
+  position: relative;
+  top: 42%;
+  left: 63%;
+  opacity: 0.7;
+  background: #777;
+  width: 1.5px;
+  height: 25%;
+}
+main #banner #event_add .add_btn .swiper-button-prev,
+main #banner #event_add .add_btn .swiper-button-next {
+  transform: translateY(90%);
+  width: 10px;
+  height: 18px;
+  background: #fff;
+  color: #777;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+main #banner #event_add .swiper-pagination {
+  width: 56px;
+  height: 26px;
+  top: 73.5%;
+  left: 86.5%;
+  transform: translate(-50%, -50%);
+  background: #f6f6f6;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+main #banner #event_add .swiper-pagination::before {
+  display: block;
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 46%;
+  background: #f6f6f6;
+  content: "";
+}
+main #banner #event_add .swiper-pagination .swiper-pagination-current {
+  color: #666;
+}
+main #banner #event_add .swiper-pagination .swiper-pagination-current::after {
+  display: block;
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 26%;
+  left: 46%;
+  color: #666;
+  opacity: 0.5;
+  content: "/";
+}
+main #banner #event_add .swiper-pagination .swiper-pagination-total {
+  color: #666;
+  opacity: 0.5;
 }
 main {
   /* --------------------------신제품 */
