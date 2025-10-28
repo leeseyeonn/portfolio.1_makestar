@@ -36,3 +36,7 @@ $color-gray-05:#999;
 @mixin whtie-bg {display: block; content: ''; width: 100%; position: absolute; top: 0; left: 0; background-color: #fff;}
 @mixin after-set {display: block; width: 100%; content: ''; top: 0; left: 0; position: absolute;}
 @mixin btn-style {display: flex; flex-flow: row nowrap; align-items: center; gap:5px; padding: 10px 15px; border-radius: 60px;}
+@keyframes add-box {
+    0% {width: 260px;}
+    100% {width: 500px;}
+}

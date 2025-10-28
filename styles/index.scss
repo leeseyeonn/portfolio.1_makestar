@@ -96,6 +96,9 @@ main {
         }
         .item_title {
             padding-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .item_discount_rate {
             font-weight:$font-weight-sb;
@@ -110,6 +113,8 @@ main {
             text-align: right;
             color : $color-point-02;
             padding-top: 10px;
+            padding-right: 10px;
+            font-size:$font-size-14;
         }
     }
     .row {
@@ -123,15 +128,15 @@ main {
                 font-weight:$font-weight-m;
                 opacity:0.5;
             }
-            .andmore_btn {
-                @include btn-style;
-                border: 1px solid #BCBCBC;
-                width: max-content;
-                span {
-                    color:$color-black-02;
-                }
-                img {}
+        }
+        .andmore_btn {
+            @include btn-style;
+            border: 1px solid #BCBCBC;
+            width: max-content;
+            span {
+                color:$color-black-02;
             }
+            img {}
         }
         .item_list {
             ul {
@@ -311,6 +316,7 @@ main {
     #new {
         padding: 0 70px;
         .item_list {
+            padding-top: 120px;
             @include col; align-items: flex-end;
             padding-bottom: 20px;
         }
@@ -319,66 +325,360 @@ main {
             gap:42px;
             align-items: flex-start;
             .menu_title {
-                h2{}
+                h2{
+                    padding-top: 10px;
+                }
                 .sub_title {
-                    padding-top: 15px;
+                    padding-top: 10px;
                     padding-bottom: 185px;
                     width: max-content;
                 }
                 .andmore_btn {}
                 
             }
-            #new_items_wrap {
-                padding: 15px;
-                background:$color-white;
-                .swiper-wrapper {
-                    
-                    width: max-content;
-                    border-radius: 20px;
-                    
-                    .new {
-                        a {
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
-
-                            .item {
-                                .item_artist {}
-                                .item_title {}
-                                .item_discount_rate {}
-                                .item_price {}
-                                .item_ori_price {}
+            #new_wrap {
+                position: relative;
+                padding-bottom: 50px;
+                width: 100%;
+                overflow: hidden;
+                #new_items_wrap {
+                    padding: 15px;
+                    background:$color-white;
+                    border-radius: 10px;
+                    .swiper-wrapper {
+                        position: relative;
+                        width: max-content;
+                        .new {
+                            a {
+                                overflow: hidden;
+                                img {
+                                    border-radius: 10px;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+    
+                                .item {
+                                    .item_artist {}
+                                    .item_title {}
+                                    .item_discount_rate {}
+                                    .item_price {}
+                                    .item_ori_price {}
+                                }
                             }
                         }
+                        .new1 {}
+                        .new2 {}
+                        .new3 {}
+                        .new4 {}
+                        .new5 {}
+                        
                     }
-                    .new1 {}
-                    .new2 {}
-                    .new3 {}
-                    .new4 {}
-                    .new5 {}
                 }
-                .swiper-button-prev {}
-                .swiper-button-next {}
+                
+                .swiper_btn_grp {
+                    position: absolute;
+                    right: 5%;
+                    top:100%;
+                    width: max-content;
+                    z-index: 999;
+                    .swiper-button-prev,
+                    .swiper-button-next { 
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        top: 0; left: 0;
+                        color:$color-black-02;
+                    }
+                    .btn_line {
+                        z-index: 999;
+                        position: relative;
+                        top:0; left: 0;
+                        width: 20px; height: 20px;
+                        transform: translate(125%,-118%);
+                        &::after {
+                            position: absolute;
+                            display: block;
+                            width: 2px;
+                            opacity: 0.3;
+                            background-color:$color-black-02;
+                            height: 100%;
+                            top: 0;
+                            left: 50%;
+                            content: "";
+                        }
+                    }
+                    .swiper-button-prev {}
+                    .swiper-button-next {left: 53px;}
+                }
                 .swiper-scrollbar {
-                    position: relative;
-                    top: 30px;;
-                    left: 0;
+                    position: absolute;
+                    height: 3px;
                     width: 90%;
+                    top:97%;
+                    left: 0.5%;
+                    z-index: 999;
+                    background-color: $color-gray-04;
+                    opacity: 0.5;
+                    overflow: hidden;
                     .swiper-scrollbar-drag {
-                        background: red;
+                        background: $color-black-02;
                     }
                 }
             }
+            
         }
         
     }
     /* --------------------------인기상품 */
-    #hot {}
+    #hot {
+        width: 100%;
+        overflow: hidden;
+        .menu_title {
+            position: relative;
+            @include col;
+            h2 {
+                padding-top: 120px;
+                padding-bottom: 15px;
+            }
+            .sub_title {
+                padding-bottom: 30px;
+            }
+            .item_list {
+                
+            }
+        }
+        #hot_wrap {
+            position: relative;
+            #hot_items_wrap {
+                padding-bottom: 70px;
+                padding-top:80px ;
+                overflow: visible;
+                .swiper-wrapper {
+                    gap:20px;
+                    .hot {
+                        padding: 10px;
+                        background:$color-white;
+                        border-radius: 10px;
+                        a {
+                            overflow: hidden;
+                            img {
+                                border-radius: 10px;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .item {}
+                        }
+                    }
+                    .hot3, .hot5, .hot6, .hot7 {
+                        .pre_order_title{
+                            opacity: 0;
+                        }
+                    }
+                }
+                .swiper-slide-active {
+                    transform: scale(1.1);
+                    transform-origin : bottom center;
+
+                }
+            }
+            .swiper_btn_grp {
+                position: absolute;
+                width: 80px;
+                right: 20%;
+                top:96%;
+                .btn_line {
+                    position:relative;
+                    top:50%; left: 50%;
+                    width: 20px; height: 20px;
+                    transform: translate(-50%,-65%);
+                    &::after {
+                        position: absolute;
+                        display: block;
+                        width: 1.5px;
+                        opacity: 0.3;
+                        background-color:$color-black-02;
+                        height: 100%;
+                        top: 0;
+                        left: 50%;
+                        content: "";
+                    }
+                }
+                .swiper-button-prev,
+                .swiper-button-next {
+                    width: 18px; height: 18px;
+                    color:$color-black-02;
+                    position: absolute;
+                    top: 50%;
+                }
+                .swiper-button-prev {
+                    
+                }
+                .swiper-button-next {
+                }
+            }
+            .swiper-scrollbar{
+                position: absolute;
+                top:95%;
+                width: 45%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $color-gray-04;
+                overflow: hidden;
+                .swiper-scrollbar-drag {
+                    background: $color-black-02;
+                    opacity: 0.5;
+                }
+            }
+            
+        }
+        .andmore_btn {
+            margin: 50px auto 0;
+            
+        }
+    }
     /* --------------------------토스광고 */
-    #add {}
+    #add {
+        margin: 120px auto;
+        width: 100%;
+        height: 200px;
+        background: url(../images/toss_bg.jpg);
+        @include col;
+        justify-content: center;
+        .toss_add {
+            width: max-content;
+            margin: 0 auto;
+            a {
+                @include row;
+                gap:250px;
+                p {
+                    color:$color-white;
+                }
+                .add_left {
+                    p:nth-child(2){
+                        font-size:$font-size-30;
+                        line-height: 130%;
+                        font-weight:$font-weight-sb;
+                        padding: 5px 0;
+                    }
+                    p:nth-child(3) {
+                        font-weight:$font-weight-m;
+                    }
+                }
+                .add_right {
+                    p:nth-child(2) {
+                        text-align: right;
+                        opacity: 0.7;
+                        padding-top:5px;
+                    }
+                }
+            }
+        }
+    }
     /* --------------------------이벤트 */
-    #event {}
+    #event {
+        @include check-blu;
+        @include col;
+        padding: 0 160px;
+        gap: 50px;
+        .menu_title {
+            h2 {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+        .event_wrap {
+            @include check-sal;
+            padding-bottom: 20px;
+            ul {
+                @include row;
+                gap: 10px;
+                width: 100%;
+                height: 500px;
+                li {
+                    &:hover{
+                        animation: add-box 0.25s ease both;
+                        position: relative;
+                        &::before {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            content: "";
+                            position: absolute;
+                            top:0; left: 0;
+                            background-color: $color-black-02;
+                            opacity: 0.7;
+                            mix-blend-mode:multiply;
+                        }
+                        .add_box {
+                            position: relative;
+                            z-index: 999;
+                            opacity: 1;
+                            .event_type_top {
+                                color: red;
+                            }
+                        }
+                    }
+                    border-radius: 20px;
+                    @include check-grn;
+                    height: 100%;
+                    overflow: hidden;
+                    a {
+                        display: inline-block;
+                        width: 100%; height: 100%;
+                        .add_box {
+                            opacity: 0;
+                            .event_type_top{}
+                            .event_title_text {}
+                            .btn {
+                                button {
+                                    img {}
+                                }
+                                img {}
+                            }
+                        }
+                        
+                    }
+                }
+                li:first-child  {
+                    a {
+                        background: url(../images/event_01.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                li:nth-child(2) {
+                    a {
+                        background: url(../images/event_02.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                li:nth-child(3) {
+                    a {
+                        background: url(../images/event_03.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    
+                }
+                li:nth-child(4) {
+                    a {
+                        background: url(../images/event_04.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                li:nth-child(5) {
+                    a {
+                        background: url(../images/event_05.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        .andmore_btn {}
+    }
     /* --------------------------인스타, 공지 */
     #sns_news{}
 }
