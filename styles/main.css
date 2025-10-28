@@ -572,7 +572,6 @@ main {
   /* --------------------------이벤트 */
 }
 main #event {
-  border: 2px solid blue;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -584,7 +583,6 @@ main #event .menu_title h2 {
   padding-bottom: 20px;
 }
 main #event .event_wrap {
-  border: 5px solid salmon;
   padding-bottom: 20px;
 }
 main #event .event_wrap ul {
@@ -594,10 +592,6 @@ main #event .event_wrap ul {
   gap: 10px;
   width: 100%;
   height: 500px;
-}
-main #event .event_wrap ul li:hover {
-  animation: add-box 0.25s ease both;
-  position: relative;
 }
 main #event .event_wrap ul li:hover::before {
   display: block;
@@ -611,17 +605,59 @@ main #event .event_wrap ul li:hover::before {
   opacity: 0.7;
   mix-blend-mode: multiply;
 }
-main #event .event_wrap ul li:hover .add_box {
+main #event .event_wrap ul li:hover {
+  animation: add-box 0.25s ease both;
   position: relative;
+}
+main #event .event_wrap ul li:hover a {
+  padding: 45px;
+  background-position: center;
+  background-size: cover;
+}
+main #event .event_wrap ul li:hover a .add_box * {
+  color: #fff;
+}
+main #event .event_wrap ul li:hover a .add_box {
+  position: relative;
+  height: 100%;
   z-index: 999;
   opacity: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
-main #event .event_wrap ul li:hover .add_box .event_type_top {
-  color: red;
+main #event .event_wrap ul li:hover a .add_box .event_text_wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 25px;
+  align-items: flex-start;
+}
+main #event .event_wrap ul li:hover a .add_box .event_text_wrap .event_type_top {
+  font-weight: 500;
+  padding: 10px;
+  width: max-content;
+  border-radius: 5px;
+}
+main #event .event_wrap ul li:hover a .add_box .event_text_wrap .event_title_text {
+  font-size: 1.25rem;
+  line-height: 150%;
+  font-weight: 600;
+}
+main #event .event_wrap ul li:hover a .add_box .btn_wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-items: flex-end;
+}
+main #event .event_wrap ul li:hover a .add_box .btn_wrap .btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
 }
 main #event .event_wrap ul li {
   border-radius: 20px;
-  border: 2px solid green;
   height: 100%;
   overflow: hidden;
 }
@@ -637,6 +673,9 @@ main #event .event_wrap ul li:first-child a {
   background: url(../images/event_01.jpg);
   background-position: center;
   background-size: cover;
+}
+main #event .event_wrap ul li:first-child a .add_box .event_type_top {
+  background-color: #777;
 }
 main #event .event_wrap ul li:nth-child(2) a {
   background: url(../images/event_02.jpg);
@@ -660,6 +699,105 @@ main #event .event_wrap ul li:nth-child(5) a {
 }
 main {
   /* --------------------------인스타, 공지 */
+}
+main #sns_news {
+  padding: 0 160px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main #sns_news #sns {
+  margin-right: 120px;
+  width: 70%;
+  border: 2px solid green;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
+main #sns_news #sns .sns_title_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+main #sns_news #sns .sns_title_wrap .menu_title p {
+  padding-top: 15px;
+}
+main #sns_news #sns .sns_title_wrap .sns_icon {
+  display: flex;
+  gap: 10px;
+}
+main #sns_news #sns .ins_wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+main #sns_news #sns .ins_wrap .sns_card {
+  width: 100%;
+}
+main #sns_news #sns .ins_wrap .sns_card ul {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+main #sns_news #sns .ins_wrap .sns_card ul li {
+  border: 2px solid green;
+  cursor: pointer;
+  aspect-ratio: 4/5;
+  padding: 20px;
+}
+main #sns_news #sns .ins_wrap .sns_card ul li span {
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: left;
+  line-height: 150%;
+  box-sizing: border-box;
+}
+main #sns_news #sns .ins_wrap .ins1 {
+  padding-right: 50px;
+}
+main #sns_news #sns .ins_wrap .ins1:first-child li:first-child {
+  background: url(../images/ins_img_01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main #sns_news #sns .ins_wrap .ins1:first-child li:nth-child(2) {
+  background: url(../images/ins_img_02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main #sns_news #sns .ins_wrap .ins1:first-child li:last-child {
+  background: url(../images/ins_img_03.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main #sns_news #sns .ins_wrap .ins2 {
+  padding-left: 50px;
+}
+main #sns_news #sns .ins_wrap .ins2 li:first-child {
+  background: url(../images/ins_img_04.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main #sns_news #sns .ins_wrap .ins2 li:nth-child(2) {
+  background: url(../images/ins_img_05.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main #sns_news #sns .ins_wrap .ins2 li:last-child {
+  background: url(../images/ins_img_06.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main #sns_news #news {
+  width: 100%;
+  border: 2px solid green;
 }
 
 /*# sourceMappingURL=main.css.map */

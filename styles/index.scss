@@ -576,7 +576,6 @@ main {
     }
     /* --------------------------이벤트 */
     #event {
-        @include check-blu;
         @include col;
         padding: 0 160px;
         gap: 50px;
@@ -587,7 +586,6 @@ main {
             }
         }
         .event_wrap {
-            @include check-sal;
             padding-bottom: 20px;
             ul {
                 @include row;
@@ -596,8 +594,6 @@ main {
                 height: 500px;
                 li {
                     &:hover{
-                        animation: add-box 0.25s ease both;
-                        position: relative;
                         &::before {
                             display: block;
                             width: 100%;
@@ -609,17 +605,51 @@ main {
                             opacity: 0.7;
                             mix-blend-mode:multiply;
                         }
-                        .add_box {
-                            position: relative;
-                            z-index: 999;
-                            opacity: 1;
-                            .event_type_top {
-                                color: red;
-                            }
+                        animation: add-box 0.25s ease both;
+                        position: relative;
+                        a {
+                            padding: 45px;
+                            background-position: center;
+                            background-size: cover;
+                            .add_box * {color:$color-white;}
+                            .add_box {
+                                position: relative;
+                                height: 100%;
+                                z-index: 999;
+                                opacity: 1;
+                                display: flex;
+                                flex-flow: column nowrap;
+                                justify-content: space-between;
+                                .event_text_wrap {
+                                    @include col;
+                                    gap: 25px;
+                                    align-items: flex-start;
+                                .event_type_top {
+                                    font-weight:$font-weight-m;
+                                    padding: 10px;
+                                    width: max-content;
+                                    border-radius: 5px;
+                                    }
+                                .event_title_text {
+                                    font-size:$font-size-20;
+                                    line-height: 150%;
+                                    font-weight: $font-weight-sb;
+                                }
+                                }
+                                .btn_wrap {
+                                    @include col;
+                                    align-items: flex-end;
+                                    .btn {
+                                        @include row; gap:10px;
+                                    
+                                }
+                                }
+                                
+                        }
+                        
                         }
                     }
                     border-radius: 20px;
-                    @include check-grn;
                     height: 100%;
                     overflow: hidden;
                     a {
@@ -627,7 +657,8 @@ main {
                         width: 100%; height: 100%;
                         .add_box {
                             opacity: 0;
-                            .event_type_top{}
+                            .event_type_top{
+                            }
                             .event_title_text {}
                             .btn {
                                 button {
@@ -644,6 +675,11 @@ main {
                         background: url(../images/event_01.jpg);
                         background-position: center;
                         background-size: cover;
+                        .add_box {
+                            .event_type_top {
+                                background-color:$color-gray-02;
+                            }
+                        }
                     }
                 }
                 li:nth-child(2) {
@@ -680,5 +716,81 @@ main {
         .andmore_btn {}
     }
     /* --------------------------인스타, 공지 */
-    #sns_news{}
+    #sns_news{
+        padding: 0 160px;
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: flex-start;
+        #sns {
+            margin-right: 120px;
+            width: 70%;
+            @include check-grn;
+            display: flex;
+            flex-flow: column nowrap;
+            gap:30px;
+            .sns_title_wrap {
+                @include row;
+                justify-content: space-between;
+                align-items: flex-end;
+                .menu_title {
+                    p {
+                        padding-top:15px;
+                    }
+                }
+                .sns_icon {
+                    display: flex; gap: 10px;
+                }
+            }
+            .ins_wrap {
+                @include col;
+                gap: 20px;
+                width: 100%;
+                .sns_card {
+                    width: 100%;
+                    ul {
+                        @include check-red;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 20px;
+                        width: 100%;
+                        li {
+                            @include check-grn;
+                            cursor: pointer;
+                            aspect-ratio: 4 / 5;
+                            
+                            padding: 20px;
+                            span {
+                                color:$color-white;
+                                font-size:$font-size-12;
+                                text-align: left;
+                                line-height: 150%;
+                                box-sizing: border-box;
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                .ins1 {
+                    padding-right:50px; 
+                }
+                .ins1:first-child li:first-child {background:url(../images/ins_img_01.jpg); @include bg-size; }
+                .ins1:first-child li:nth-child(2) {background:url(../images/ins_img_02.jpg); @include bg-size;}
+                .ins1:first-child li:last-child {background:url(../images/ins_img_03.jpg); @include bg-size;}
+                .ins2 {
+                    padding-left: 50px;
+                }
+                .ins2 li:first-child {background:url(../images/ins_img_04.jpg); @include bg-size;}
+                .ins2 li:nth-child(2) {background:url(../images/ins_img_05.jpg);@include bg-size;}
+                .ins2 li:last-child {background:url(../images/ins_img_06.jpg); @include bg-size;}
+            }
+            
+            
+        }
+        #news {
+            width: 100%;
+            @include check-grn;
+        }
+    }
 }
