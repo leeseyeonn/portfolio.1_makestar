@@ -147,6 +147,7 @@ main {
                     a {
                         font-size:$font-size-18;
                     }
+                    button {font-size:$font-size-18;}
                 }
             }
         }
@@ -717,15 +718,13 @@ main {
     }
     /* --------------------------인스타, 공지 */
     #sns_news{
-        padding: 0 160px;
+        padding: 0 260px;
         display: grid;
-        grid-template-columns:repeat(2, 1fr);
-        justify-content: space-between;
+        @include row;
+        gap: 200px;
         align-items: flex-start;
         #sns {
-            margin-right: 120px;
-            width: 70%;
-            @include check-grn;
+            width: max-content;
             display: flex;
             flex-flow: column nowrap;
             gap:30px;
@@ -744,28 +743,52 @@ main {
             }
             .ins_wrap {
                 @include col;
-                gap: 20px;
+                gap: 15px;
                 width: 100%;
                 .sns_card {
                     width: 100%;
                     ul {
-                        @include check-red;
                         display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        gap: 20px;
-                        width: 100%;
+                        @include row;
+                        gap:15px;
+                        width: max-content;
                         li {
-                            @include check-grn;
+                            &:hover{
+                                span {opacity: 1;}
+                                &::before {
+                                    border-radius: 10px;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    content: "";
+                                    position: absolute;
+                                    top:0; left: 0;
+                                    background: rgba($color: #333, $alpha: 0.8);
+                                    mix-blend-mode:multiply;
+                                    animation: ins-box 0.4s ease both;
+                                }
+                            }
+                            position: relative;
                             cursor: pointer;
-                            aspect-ratio: 4 / 5;
-                            
-                            padding: 20px;
+                            width: 200px;
+                            height: 270px;
+                            padding: 15px;
+                            border-radius: 10px;
                             span {
+                                font-weight:$font-weight-l;
+                                opacity: 0;
+                                position: relative;
+                                z-index: 10;
                                 color:$color-white;
-                                font-size:$font-size-12;
+                                font-size:$font-size-14;
                                 text-align: left;
-                                line-height: 150%;
+                                line-height: 200%;
                                 box-sizing: border-box;
+                                width: 100%;
+                                display:-webkit-box;
+                                -webkit-box-orient:vertical;
+                                overflow: hidden;
+                                -webkit-line-clamp:10;
                             }
                         }
                         
@@ -773,13 +796,13 @@ main {
                     
                 }
                 .ins1 {
-                    padding-right:50px; 
+                    padding-right: 20px;
                 }
                 .ins1:first-child li:first-child {background:url(../images/ins_img_01.jpg); @include bg-size; }
                 .ins1:first-child li:nth-child(2) {background:url(../images/ins_img_02.jpg); @include bg-size;}
                 .ins1:first-child li:last-child {background:url(../images/ins_img_03.jpg); @include bg-size;}
                 .ins2 {
-                    padding-left: 50px;
+                    padding-left: 20px;
                 }
                 .ins2 li:first-child {background:url(../images/ins_img_04.jpg); @include bg-size;}
                 .ins2 li:nth-child(2) {background:url(../images/ins_img_05.jpg);@include bg-size;}
@@ -789,8 +812,76 @@ main {
             
         }
         #news {
-            width: 100%;
-            @include check-grn;
+            width: max-content;
+            .menu_title {
+                h2 {}
+                .sub_title {
+                    padding-top: 10px;
+                    padding-bottom: 30px;
+                }
+            }
+            .notice {
+                dl {
+                    padding-top: 20px;
+                    @include col;
+                    align-items: flex-start;
+                    gap:25px;
+                    width: 367px;
+                    dt {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                        font-size: $font-size-18;
+                        padding-top:10px;
+                        border-top: 0.3px solid rgba($color: #333, $alpha: 0.3);
+                        padding-right:10px;
+                        
+                    }
+                    .notice_date {
+                        width: 100%;
+                        @include row;
+                        justify-content: space-between;
+                        padding-right:10px;
+                        dd {}
+                    }
+                }
+                .notice_contents {}
+                .winner {
+                    @include dis-non;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background:$color-gray-06;
+    padding:50px 260px 100px;
+    @include row;
+    justify-content: space-between;
+    .ftr_left {
+        .business {
+            ul {
+                @include row;
+                li {
+                    font-weight:$font-weight-m;
+                    padding-right: 15px;
+                }
+            }
+        }
+        .cs {
+            p {}
+        }
+    }
+    .ftr_right {
+        .ftr_logo {
+            img {}
+        }
+        .adress {
+            ul {
+                li {}
+            }
         }
     }
 }
