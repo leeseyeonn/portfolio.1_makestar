@@ -73,13 +73,13 @@ header {
                 span {}
                 img {}
             }
-            /* 옵션들 */
+            
+        }
+    }/* 옵션들 */
             .select {
                 @include dis-non;
                 .options {}
             }
-        }
-    }
 }
 
 main {
@@ -130,13 +130,19 @@ main {
             }
         }
         .andmore_btn {
+            &:hover {
+                animation: andmore-btn-ani 0.5s ease both;
+                border: 1px solid #333;
+                span {color:$color-white;}
+                svg {fill:$color-white;}
+            }
             @include btn-style;
             border: 1px solid #BCBCBC;
             width: max-content;
             span {
                 color:$color-black-02;
             }
-            img {}
+            svg {fill:#333;}
         }
         .item_list {
             ul {
@@ -144,10 +150,8 @@ main {
                 gap:25px;
                 li {
                     opacity: 0.5;
-                    a {
-                        font-size:$font-size-18;
-                    }
-                    button {font-size:$font-size-18;}
+                    font-size:$font-size-18;
+                    cursor: pointer;
                 }
             }
         }
@@ -205,7 +209,7 @@ main {
                             @include btn-style;
                             background:$color-black-02;
                             color:$color-white;
-
+                            border: 0px solid #BCBCBC;
                             img {
                                 width: 12px;
                                 height: 12px;
@@ -578,7 +582,7 @@ main {
     /* --------------------------이벤트 */
     #event {
         @include col;
-        padding: 0 160px;
+        padding: 0 160px 130px ;
         gap: 50px;
         .menu_title {
             h2 {
@@ -641,7 +645,7 @@ main {
                                     @include col;
                                     align-items: flex-end;
                                     .btn {
-                                        @include row; gap:10px;
+                                        @include row; gap:20px;
                                     
                                 }
                                 }
@@ -712,19 +716,27 @@ main {
                         background-size: cover;
                     }
                 }
+                li:last-child {
+                    a {
+                        background: url(../images/event_05.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
             }
         }
         .andmore_btn {}
     }
     /* --------------------------인스타, 공지 */
     #sns_news{
-        padding: 0 260px;
-        display: grid;
+        width: fit-content;
+        padding-bottom:120px;
         @include row;
-        gap: 200px;
+        gap:  8vw;
         align-items: flex-start;
+        justify-content: center;
+        margin: 0 auto;
         #sns {
-            width: max-content;
             display: flex;
             flex-flow: column nowrap;
             gap:30px;
@@ -751,7 +763,7 @@ main {
                         display: grid;
                         @include row;
                         gap:15px;
-                        width: max-content;
+                        width: 100%;
                         li {
                             &:hover{
                                 span {opacity: 1;}
@@ -789,6 +801,10 @@ main {
                                 -webkit-box-orient:vertical;
                                 overflow: hidden;
                                 -webkit-line-clamp:10;
+                                em {
+                                    font-weight: $font-weight-m;
+                                    color:$color-white;
+                                }
                             }
                         }
                         
@@ -812,7 +828,6 @@ main {
             
         }
         #news {
-            width: max-content;
             .menu_title {
                 h2 {}
                 .sub_title {
@@ -842,7 +857,7 @@ main {
                         width: 100%;
                         @include row;
                         justify-content: space-between;
-                        padding-right:10px;
+                        padding-right:30px;
                         dd {}
                     }
                 }
@@ -862,25 +877,53 @@ footer {
     justify-content: space-between;
     .ftr_left {
         .business {
+            padding-bottom: 40px;
             ul {
                 @include row;
                 li {
-                    font-weight:$font-weight-m;
+                    &::before {
+                        @include aft;
+                        background:$color-black-02;
+                        width: 1.3px;
+                        opacity: 0.5;;
+                        right: 7px;
+                        height: 85%;
+                        top:8%;
+                    }
+                    position: relative;
                     padding-right: 15px;
+                }
+                li:last-child {
+                    &::before {@include dis-non;}
                 }
             }
         }
         .cs {
+            @include col;
+            align-items: flex-start;
+            gap:10px;
             p {}
+            p:first-child {
+                font-size:$font-size-20;}
+            p:nth-child(2) {font-size:$font-size-16;}
+            p:last-child {
+                font-size:$font-size-16;
+                opacity: 0.5;
+            }
         }
     }
     .ftr_right {
         .ftr_logo {
+            padding-bottom: 40px;
             img {}
         }
         .adress {
             ul {
-                li {}
+                li {
+                    padding-bottom: 10px;
+                    font-size:$font-size-16;
+                    color:$color-black-03;
+                }
             }
         }
     }
